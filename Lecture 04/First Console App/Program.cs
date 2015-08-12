@@ -94,7 +94,7 @@ namespace First_Console_App
             }
             #endregion
 
-            #region While
+            #region While      
             /* while loop evaluate the true/false statement just like If statement.
              * If statement in the while(conditional statement) results true then it enters in the block. otherwise while inner code will not run.
              */
