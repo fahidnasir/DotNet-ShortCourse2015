@@ -1,0 +1,68 @@
+﻿<Window x:Class="WPFModelBinding.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008/xaml/presentation"
+        Height="350"
+        xmlns:local="clr-namespace:WPFModelBinding"
+        Width="525">
+    <Grid>
+        <Label x:Name="label"
+               Content="First Name"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Top"
+               Margin="10,14,0,0" />
+        <TextBlock Name="txtBlockExample" />
+        <TextBox x:Name="txtFirstName"
+                 HorizontalAlignment="Left"
+                 Height="23"
+                 Margin="165,14,0,0"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Top"
+                 Text="{Binding FirstName, Mode=TwoWay}"
+                 Width="342" />
+        <Label x:Name="label1"
+               Content="Last Name"
+               HorizontalAlignment="Left"
+               Margin="10,51,0,0"
+               VerticalAlignment="Top" />
+        <TextBox x:Name="txtLastName"
+                 HorizontalAlignment="Left"
+                 Height="23"
+                 Margin="165,51,0,0"
+                 Text="{Binding LastName, Mode=TwoWay}"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Top"
+                 Width="342" />
+        <TextBox x:Name="txtFullName"
+                 HorizontalAlignment="Left"
+                 Height="23"
+                 Margin="165,90,0,0"
+                 Text="{Binding FullName, Mode=OneWay}"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Top"
+                 Width="342"
+                 IsReadOnly="True" />
+        <Label x:Name="label2"
+               Content="Full Name"
+               HorizontalAlignment="Left"
+               Margin="10,90,0,0"
+               VerticalAlignment="Top" />
+        <TextBox x:Name="txtAge"
+                 HorizontalAlignment="Left"
+                 Height="23"
+                 Text="{Binding Age, Mode=TwoWay}"
+                 Margin="165,128,0,0"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Top"
+                 Width="342" />
+        <Label x:Name="label3"
+               Content="Age"
+               HorizontalAlignment="Left"
+               Margin="10,128,0,0"
+               VerticalAlignment="Top" />
+        <Button x:Name="btnSubmit" Content="Submit" Click="btnSubmit_Click"
+                HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="30" Width="30"/>
+
+    </Grid>
+</Window>
