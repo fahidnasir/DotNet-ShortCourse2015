@@ -23,7 +23,7 @@ namespace WPFModelBinding
         public MainWindow()
         {
             InitializeComponent();
-            this.DataContext = new Student() { Age = "105", FirstName="fahid", LastName="nasir"};
+            childGrid.DataContext = new Student() { Age = "105", FirstName = "fahid", LastName = "nasir" };
         }
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
