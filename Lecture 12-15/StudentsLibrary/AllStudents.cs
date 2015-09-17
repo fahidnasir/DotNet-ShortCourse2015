@@ -29,7 +29,6 @@ namespace StudentsLibrary
                     conn.ConnectionString = ConfigurationManager.ConnectionStrings["db_connectionString"].ConnectionString;
                     conn.Open();
 
-
                     MySqlCommand command = new MySqlCommand("SELECT c.`Name` AS 'Course', u.`Name`, u.`RollNumber` FROM users u INNER JOIN classes c ON c.`Id` = u.`ClassId`", conn);
                     using (MySqlDataReader reader = command.ExecuteReader())
                     {

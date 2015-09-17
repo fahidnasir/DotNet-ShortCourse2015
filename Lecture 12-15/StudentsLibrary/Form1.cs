@@ -44,15 +44,16 @@ namespace StudentsLibrary
                     conn.ConnectionString = _connectionString;
                     conn.Open();
 
-                    MySqlCommand insertCommand = new MySqlCommand("INSERT INTO users(`Name`,`RollNumber`,`ClassId`) VALUES (@1, @2, @3)", conn);
+                    MySqlCommand insertCommand = new MySqlCommand(
+                        "INSERT INTO users(`Name`,`RollNumber`,`ClassId`) VALUES (@a, @b, @c)", conn);
 
-                    MySqlParameter paramName = new MySqlParameter("1", MySqlDbType.VarChar, 20);
+                    MySqlParameter paramName = new MySqlParameter("a", MySqlDbType.VarChar, 20);
                     paramName.Value = txtName.Text;
 
-                    MySqlParameter paramRoll = new MySqlParameter("2", MySqlDbType.VarChar, 20);
+                    MySqlParameter paramRoll = new MySqlParameter("b", MySqlDbType.VarChar, 20);
                     paramRoll.Value = txtRollNumber.Text;
 
-                    MySqlParameter paramCourse = new MySqlParameter("3", MySqlDbType.Int32, 11);
+                    MySqlParameter paramCourse = new MySqlParameter("c", MySqlDbType.Int32, 11);
                     paramCourse.Value = cmbCourse.SelectedIndex;
 
                     insertCommand.Parameters.Add(paramName);
