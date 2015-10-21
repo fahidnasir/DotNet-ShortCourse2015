@@ -40,7 +40,7 @@ namespace WPF_DB_Sample
             User modelValues = (this.rootElementForBinding.DataContext as User);
             try
             {
-                int rowId = modelValues.SaveUserInDatabase();
+                long rowId = modelValues.SaveUserInDatabase();
                 if (rowId > 0)
                     lblResult.Content = "Record is saved and Row ID is: " + rowId;
                 else

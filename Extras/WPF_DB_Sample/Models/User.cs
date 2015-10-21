@@ -51,7 +51,7 @@ namespace WPF_DB_Sample.Models
         /// and whenever you have to save data. just call that method. and this method knows how to save a user in DB.
         /// </summary>
         /// <returns></returns>
-        public int SaveUserInDatabase()
+        public long SaveUserInDatabase()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["db_connectionString"].ConnectionString;
             using (MySqlConnection conn = new MySqlConnection(connectionString))

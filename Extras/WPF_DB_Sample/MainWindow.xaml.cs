@@ -64,6 +64,15 @@ namespace WPF_DB_Sample
             string name = this.txtName.Text;
             string email = this.txtEmail.Text;
 
+            //#region Temp delete it
+            //int a = Convert.ToInt32(name);
+            //int b = Convert.ToInt32(email);
+
+            //int c = a + b;
+            //MessageBox.Show(c.ToString());
+            //return;
+            //#endregion
+
             /**
              * See the App.Config of this project to see the connection string.
              * Make the Changes in the Connection string according to your database server.
